@@ -8,7 +8,13 @@ branches:
     - master
 addons:
   chrome: stable
+before_script:
+  - yarn global add @angular/cli
+cache:
+  yarn: true
+  directories:
+    - node_modules
 script:
   - ng test --watch=false
 after_success:
-  - ng deploy --base-href=https://dECRISES.github.io/app-generator/ --message="docs auto generated commit"
+  - ng deploy --base-href=https://devs-from-matrix.github.io/ff4j-web-console/ --message="docs auto generated commit"
