@@ -8,5 +8,7 @@ branches:
     - master
 addons:
   chrome: stable
+script:
+  - ng test --watch=false
 after_success:
   - ng deploy --base-href=https://dECRISES.github.io/app-generator/ --message="docs auto generated commit"
