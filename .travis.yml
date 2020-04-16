@@ -17,4 +17,4 @@ cache:
 script:
   - ng test --watch=false
 after_success:
-  - ng deploy --base-href=https://decrises.github.io/app-generator/ --message="docs auto generated commit" --silent=false
+  - ng deploy --base-href=https://decrises.github.io/app-generator/ --message="docs auto generated commit" --branch gh-pages
